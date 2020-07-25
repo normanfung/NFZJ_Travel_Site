@@ -1,0 +1,495 @@
+/* Global Styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Abril Fatface", cursive;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  background: white;
+  border: none;
+  outline: none;
+  opacity: 0.8;
+}
+
+/* Nav Section */
+
+.main-head {
+  background-color: #f8f8f8;
+  color: rgb(211, 117, 117);
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  min-height: 3vh;
+}
+
+nav {
+  min-height: 3vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex: 1 1 30rem;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#logo {
+  flex: 1 1 30rem;
+  font-family: "Pattaya", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(207, 117, 117);
+}
+
+.hero {
+  min-height: 97vh;
+  background: linear-gradient(rgba(119, 118, 118, 0.2), transparent),
+    url(./Photos/white-concrete-house-near-body-of-water-under-white-and-blue-1285625.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(196, 76, 76);
+  font-size: 1.5rem;
+}
+
+.hero button {
+  color: rgb(209, 45, 45);
+  opacity: 0.7;
+  transition: 0.5s all ease-in-out;
+}
+
+.hero button:hover {
+  background: rgb(209, 45, 45);
+  color: white;
+  cursor: pointer;
+}
+
+.hero h3 {
+  padding: 1rem;
+}
+
+.hero h2 {
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.container {
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.container img {
+  height: 70vh;
+  width: 50vh;
+
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.container img:hover {
+  transform: scale(1.1);
+}
+
+#locations {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url(./Photos/wave.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.moving-cloud-1 {
+  width: 30%;
+  z-index: 1;
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+  width: 30%;
+  top: 10%;
+  z-index: -1;
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.imagetext {
+  position: static;
+  font-size: 3rem;
+  color: rgba(238, 73, 51, 0.884);
+  text-decoration: underline;
+  z-index: 2;
+  transform: translateY(40%);
+}
+
+.quotes {
+  text-align: center;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  transform: translateY(60%);
+}
+
+.locations-head {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#benefits {
+  max-width: 90%;
+  margin: auto;
+
+  min-height: 80vh;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 1rem;
+  background: rgb(223, 111, 111);
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.2rem;
+  flex-wrap: wrap;
+  flex: 1 1 25rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card h4 {
+  padding: 1rem;
+  font-size: 1.5rem;
+
+  color: white;
+}
+
+.card p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.card card-icon {
+  height: 40%;
+  width: 100%;
+}
+
+.card-icon img {
+  width: 100%;
+  height: 20vh;
+  /* object-fit: cover; */
+  transition: all 0.3s ease-in-out;
+}
+
+.card-icon img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+.animated-images {
+  text-align: center;
+  color: #eba65b;
+  min-height: 70vh;
+}
+
+.animated-images h1 {
+  font-size: 2rem;
+}
+
+.wrapper {
+  position: relative;
+  top: 10%;
+  left: 40%;
+  width: 300px;
+  height: 500px;
+  perspective: 900px;
+  margin-top: 1rem;
+}
+
+.container2 {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s all ease;
+  transform: rotateX(60deg) scale(0.7);
+  perspective: 900px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  animation: entry 1s linear 1;
+}
+
+#c0 {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #eba65b 30%, #d99267 100%);
+  z-index: 300;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+#c1 {
+  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  left: 120%;
+  z-index: 0;
+}
+
+#c2 {
+  left: -120%;
+  z-index: 0;
+  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container2:hover {
+  cursor: pointer;
+  transform: rotate(0deg) scale(1) translateY(10px);
+  transition: 0.5s all ease;
+  z-index: 400;
+}
+
+.image {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #e09c54 30%, #d99267 100%);
+}
+
+.city img {
+  height: 100%;
+  width: 100%;
+}
+
+.story {
+  position: absolute;
+  top: 55%;
+  left: 0%;
+  height: 30%;
+  width: 100%;
+  z-index: 30;
+}
+
+.info {
+  position: absolute;
+  top: 10%;
+}
+
+.info h3 {
+  text-align: center;
+  text-shadow: 0px 0px 10px #eee;
+  color: #eee;
+  letter-spacing: 2px;
+}
+
+.info p {
+  font-size: 14px;
+  color: #fff;
+  padding: 0px 20px 20px 20px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.page {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  left: 0%;
+  height: 20%;
+  z-index: 30;
+}
+
+#contact {
+  min-height: 90vh;
+  background: url(./Photos/hot-air-ballons-in-the-sky-2325446.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  background-color: rgba(221, 151, 90, 0.5);
+  width: 25%;
+  color: white;
+  border-radius: 20px;
+}
+
+.form-wrapper label {
+  padding: 0rem 1rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  margin-top: 1rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: rgba(221, 151, 90);
+}
+
+.form-wrapper button:hover {
+  background: rgba(221, 151, 90);
+  color: white;
+}
+
+.form-head {
+  text-align: center;
+  padding: 1rem;
+}
+
+.name-form,
+.email-form {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  color: #eba65b;
+  min-height: 10vh;
+}
+
+.footer-wrapper {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh;
+}
+
+.footer-wrapper ul li a img {
+  height: 3vh;
+  width: 3vw;
+}
+
+footer h5 {
+  flex: 1 1 40rem;
+  font-size: 1.5rem;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  flex: 1 1 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes simple {
+  50% {
+    transform: translateX(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes simple1 {
+  50% {
+    transform: translateX(-10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes entry {
+  0% {
+    top: -20%;
+    opacity: 0.1;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 1rem;
+  }
+
+  .cloud {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    font-size: 100%;
+  }
+  .hero h3 {
+    background: white;
+    opacity: 0.8;
+    width: 100%;
+  }
+
+  .hero button {
+    width: 100%;
+    height: 100%;
+    background: rgb(209, 45, 45);
+    color: white;
+  }
+
+  .hero button:hover {
+    width: 100%;
+    height: 100%;
+    background: rgb(223, 111, 111);
+    opacity: 0.8;
+    color: white;
+  }
+}
